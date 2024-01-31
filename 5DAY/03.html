@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div, header, footer, section, aside { box-sizing: border-box; }
+    * { margin: 0; padding: 0; }
+    #wrap { width: 70vw; max-width: 1400px;
+            margin: 0 auto; }
+    header { height: 150px; background-color: cadetblue; }
+    #content { display: flex; height: calc(100vh - 150px - 100px); }
+    section { width: 300px; background-color: chocolate; 
+              flex: 2; }
+    aside { width: 100px; background-color: darkolivegreen; 
+            flex: 1; }
+    footer { height: 100px; background-color: darkblue; }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <header><h1>가변 레이아웃</h1></header>
+    <div id="content">
+      <section>본문</section>
+      <aside>사이드바</aside>
+    </div>
+    <footer>copy</footer>
+  </div>
+</body>
+</html>

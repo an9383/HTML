@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    #wrap { 
+      width: 500px; 
+      margin: 0 auto; 
+      background-color: darkslategray;
+
+    }
+    .menu { 
+      padding-left: 50px;
+      list-style: none;
+     }
+    .menu li { display: inline-block; 
+               height: 50px;
+               /* border: 1px solid red; */
+               line-height: 50px;
+               /* padding-top: 32px; */
+               box-sizing: border-box;
+               margin-right: 20px;
+     }
+     .menu li:first-child { background-color: yellow; }
+     .menu li:nth-child(3) { visibility: hidden; }
+     .menu li:last-child { background-color: red; }
+     .menu li a { color: #fff; text-decoration: none;  } 
+     .menu li a:hover { color: darkmagenta; }
+  </style>
+</head>
+<body>
+  <!-- #wrap>ul.menu>li*5>a -->
+  <div id="wrap">
+    <ul class="menu">
+      <li><a href="#">menu01</a></li>
+      <li><a href="#">menu02</a></li>
+      <li><a href="#">menu03</a></li>
+      <li><a href="#">menu04</a></li>
+      <li><a href="#">menu05</a></li>
+    </ul>
+  </div>  
+</body>
+</html>

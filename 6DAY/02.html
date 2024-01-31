@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>em / rem</title>
+  <style>
+    html { font-size: 10px;} /* font-size:10px;*/
+    body { font-size: 1rem;} /* 1em = 12px */
+    #wrap * { border:1px solid red; margin: 10; padding:10px; }
+    header { font-size: 2rem;}
+    #content { font-size: 1.4rem; }
+    #content section { font-size: 2rem;}
+    #content section p { font-size: 1rem; }
+    footer { font-size: 1rem; }
+    ul { font-size: 24px;}
+    li { font-size: 1.2rem;} /* 12rem = 12px*/
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <h1>title</h1>
+    <header></header>
+    <div id="content">
+      <section>
+        <h2>sub title</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero dolore necessitatibus alias dolores a, commodi, rem sit quibusdam exercitationem nihil ad natus dicta sunt et autem consequuntur distinctio deleniti eos?</p>
+          <ul>
+            <li>바나나</li>
+            <li>딸기</li>
+            <li>수박</li>
+          </ul>
+      </section>
+      <aside>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam esse laborum ipsum sequi? Itaque excepturi saepe voluptatibus animi maxime, accusamus est illo alias officiis a. Quo quaerat dolorum laboriosam pariatur!</p>
+      </aside>
+    </div>
+    <footer>
+      <p>copyright</p>
+    </footer>
+  </div>
+</body>
+</html>

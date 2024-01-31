@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>간격</title>
+  <style>
+    .wrap1 { background-color: chocolate; overflow: hidden; }
+    .wrap2 { background-color: cornflowerblue; border: 1px solid cornflowerblue; }
+    .wrap3 { background-color: burlywood; }
+    .wrap4 { background-color: darkolivegreen; }
+    .box { 
+      width: 200px; height: 200px; 
+      border: 1px solid red; 
+    }
+
+    .box:nth-child(1) { }
+    .box:nth-child(2) { box-sizing: content-box; padding: 50px; }
+    .box:nth-child(3) { box-sizing: border-box; padding: 50px; border: 50px solid red; }
+    .box:nth-child(4) { border: 50px solid red; }
+    .box:nth-child(5) { border: 50px solid red; padding: 50px; }
+  </style>
+</head>
+<body>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+</body>
+</html>

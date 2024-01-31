@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 초기화 */
+    body, h1, h2, h3, p, ul, li { margin: 0; padding: 0; }
+    div, ul, li, p { box-sizing: border-box; }
+    ul li { list-style: none; }
+
+    /* 모바일 500px ~ 768px */
+    #wrap { width: 100%; }
+    h2 { font-size: 18px; color: darkslateblue; 
+         text-transform: uppercase;
+         margin: 30px 0 10px; padding-left: 10px; }
+    .list { display: flex; flex-flow: row wrap; 
+            justify-content: space-between;  }     
+    .list li { width: 49%; margin-bottom: 10px;
+               border: 1px solid red; 
+               height: 140px; overflow: hidden; }      
+    .list li img { width: 100%; display: block; }  
+    
+    /* 태블릿 */
+    /* max-width: 768px   0~768px */
+    /* min-width: 768px   768px ~ */
+    @media screen and (min-width: 768px) {
+      /* body { background-color: red; } */
+      #wrap { padding: 0 2%; }
+      h2 { padding-left: 0px; }
+      .list li { height: 160px; width: 32.5%; }
+    }
+
+    /* PC 1200px 이상 ~ 1400px 이하 중앙정렬 */
+    @media screen and (min-width: 1100px) {
+       /* body { background-color: red; } */
+       #wrap { max-width: 1400px; margin: 0 auto; }
+       h2 { font-size: 24px; text-align: center; }
+       .list li { height: 180px; width: 24.5%; }
+    }
+    @media screen and (min-width: 1400px) {
+       #wrap { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+   <div id="wrap">
+      <h2>Gallery</h2>
+      <ul class="list">
+        <li><img src="images/img01.jpg" alt="1"></li>
+        <li><img src="images/img02.jpg" alt="2"></li>
+        <li><img src="images/img03.jpg" alt="3"></li>
+        <li><img src="images/img04.jpg" alt="4"></li>
+        <li><img src="images/img05.jpg" alt="5"></li>
+        <li><img src="images/img06.jpg" alt="6"></li>
+        <li><img src="images/img07.jpg" alt="7"></li>
+        <li><img src="images/img08.jpg" alt="8"></li>
+        <li><img src="images/img09.jpg" alt="9"></li>
+        <li><img src="images/img10.jpg" alt="10"></li>
+        <li><img src="images/img11.jpg" alt="11"></li>
+        <li><img src="images/img12.jpg" alt="12"></li>
+      </ul>
+   </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>2D transform : skew() 비틀기 </title>
+  <style>
+    .origin { width: 332px; height: 150px; border: 1px solid #ccc;
+              margin: 10px auto; }
+    .origin > div { 
+      transition-property: transform;
+      transition-duration: 0.5s;
+      transition-timing-function: ease;
+      /* transition-delay: 5s; */
+    }          
+    .skew:hover { transform: skew(15deg, 15deg); }              
+    .skewX:hover { transform: skewX(15deg); }              
+    .skewY:hover { transform: skewY(15deg); }              
+  </style>
+</head>
+<body>
+  <div class="origin">
+    <div class="skew">
+      <img src="coupang.jpg" alt="">
+    </div>
+  </div>
+  <div class="origin">
+    <div class="skewX">
+      <img src="coupang.jpg" alt="">
+    </div>
+  </div>
+  <div class="origin">
+    <div class="skewY">
+      <img src="coupang.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>

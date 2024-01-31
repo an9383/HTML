@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>2D transform : rotate() 3d 회전 </title>
+  <style>
+    .origin { width: 332px; height: 150px; border: 1px solid #ccc;
+              margin: 10px auto; perspective: 500px; }
+    .origin > div { 
+      transition-property: transform;
+      transition-duration: 1s;
+      transition-timing-function: ease;
+      /* transition-delay: 5s; */
+    }          
+    .rotate:hover { transform: rotate(90deg); }              
+    .rotateX:hover { transform: rotateX(360deg); }              
+    .rotateY:hover { transform: rotateY(360deg); }              
+  </style>
+</head>
+<body>
+  <div class="origin">
+    <div class="rotate">
+      <img src="coupang.jpg" alt="">
+    </div>
+  </div>
+  <div class="origin">
+    <div class="rotateX">
+      <img src="coupang.jpg" alt="">
+    </div>
+  </div>
+  <div class="origin">
+    <div class="rotateY">
+      <img src="coupang.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>

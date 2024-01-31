@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body { 
+      background-image: url(images/bg5.png), linear-gradient(45deg, #0000ff, #fff);
+      background-repeat: no-repeat, no-repeat;
+      background-position: right center, left top;
+      background-attachment: fixed, scroll;
+    }
+
+    /* 10 + 100 + 490 = 600 */
+    .box2, .box3 { 
+      width: 490px; border: 5px solid gray; padding: 50px; 
+      margin: 50px auto; 
+      background-color: #fff; 
+      background-image: url(images/bg2.jpg);
+      background-size: 100px;
+    }
+    .box1 { 
+            width: 490px; border: 5px solid gray; padding: 50px; 
+            margin: 50px auto; 
+            box-shadow: 10px 10px 10px red;
+            background: #fff url(images/bg2.jpg) repeat-x left top / 100px;
+    }
+    .box2 { background-repeat: no-repeat;
+            background-position: center; }
+    .box3 { background-repeat: repeat-y; 
+            background-position: right top; }
+    h1 { margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <h1>초콜릿</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fuga quos quo pariatur nobis cumque fugit? Repudiandae dolore labore, ipsam, minus aliquam iusto, quae quibusdam ratione exercitationem id placeat beatae!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fuga quos quo pariatur nobis cumque fugit? Repudiandae dolore labore, ipsam, minus aliquam iusto, quae quibusdam ratione exercitationem id placeat beatae!</p>
+  </div>
+  <div class="box2">
+    <h1>초콜릿</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fuga quos quo pariatur nobis cumque fugit? Repudiandae dolore labore, ipsam, minus aliquam iusto, quae quibusdam ratione exercitationem id placeat beatae!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fuga quos quo pariatur nobis cumque fugit? Repudiandae dolore labore, ipsam, minus aliquam iusto, quae quibusdam ratione exercitationem id placeat beatae!</p>
+  </div>
+  <div class="box3">
+    <h1>초콜릿</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fuga quos quo pariatur nobis cumque fugit? Repudiandae dolore labore, ipsam, minus aliquam iusto, quae quibusdam ratione exercitationem id placeat beatae!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam fuga quos quo pariatur nobis cumque fugit? Repudiandae dolore labore, ipsam, minus aliquam iusto, quae quibusdam ratione exercitationem id placeat beatae!</p>
+  </div>
+</body>
+</html>

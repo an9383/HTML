@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>레이아웃 연습</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    #wrap { 
+      width: 800px; 
+      margin: 0 auto;
+      padding: 15px;
+      box-sizing: border-box;
+     } 
+     .border { border: 1px solid #ccc; }
+     header { padding: 30px 20px; margin-bottom: 15px; }
+     h1 { font-size: 24px; }
+     h1::before { content: "1234"; display: block; background-color: red; }
+     h1::after { content: "5678"; display: block; background-color: blue;  }
+     main { margin-bottom: 15px; background-color: blueviolet;  }
+     main::after { content: ""; display: block; clear: both; }
+     section { padding: 30px 20px; float: left; width: 540px; }
+     /* 800-22 -> 778 - (540+42) */
+     aside { padding: 30px 20px; float: right; width: 139px; }
+     aside ul { padding-left: 20px; }
+     main h2 { margin-bottom: 10px; }
+     /* section h2, aside h2 { margin-bottom: 10px; } */
+     section p + p { margin-top: 10px; }
+     footer { padding: 30px 20px; background-color: yellow; }
+     footer h3 { margin-bottom: 10px; }
+     footer h3, footer p { line-height: 1; }
+
+     #wrap header:first-child { border-color: red; }
+     /* #wrap header:first-of-type { border-color: blue; } */
+
+     section p:first-of-type::first-letter { color: red; }
+     section p:first-of-type::first-line { color: blue; }
+     section p:first-of-type::selection { background-color: green; }
+  </style>
+</head>
+<body>
+  <div id="wrap" class="border">
+    <br>
+    <header class="border">
+      <h1>사이트 제목</h1>
+    </header>
+    <main>
+      <section class="border">
+        <h2> <!-- 가상의공간 " --> 본문 <!-- "가상의공간 --> </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore eum maxime sapiente id quod iusto at officiis corrupti dolor! Obcaecati dolore beatae voluptate error vero laboriosam illo ut ea!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident labore eum maxime sapiente id quod iusto at officiis corrupti dolor! Obcaecati dolore beatae voluptate error vero laboriosam illo ut ea!</p>
+      </section>
+      <aside class="border">
+        <h2>사이드 바</h2>
+        <ul>
+          <li>베너1</li>
+          <li>베너2</li>
+          <li>베너3</li>
+        </ul>
+      </aside>
+    </main>
+    <footer class="border">
+      <h3>하단</h3>
+      <p>copyright</p>
+    </footer>
+  </div>
+</body>
+</html>

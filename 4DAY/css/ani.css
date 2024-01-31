@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+* { margin:0; padding:0;}
+
+.clear::after { content:''; display: block; clear:both;}
+/* body { background-color: blueviolet;} */
+#wrap { width: 1200px; margin: 0 auto; }
+.product { width: 390px; float: left; box-sizing: border-box; margin-right: 15px;}
+.product:last-child { margin-right:0;}
+
+.imgbox { width: 100%; height: 400px; position: relative; overflow:hidden;
+          background-repeat: no-repeat;
+          background-size: auto 100% ;
+          background-position: center;
+          border: 1px solid #ededed; background-color:blue;
+          transition: background-size .5s ease;
+}
+#wrap .product:nth-child(1) .imgbox { background: url(../img/1.jpg); }
+#wrap .product:nth-child(2) .imgbox { background: url(../img/2.jpg); }
+#wrap .product:nth-child(3) .imgbox { background: url(../img/3.jpg); }
+.imgbox:hover { background-size: auto 110%;}
+
+.imgbox::after { content:''; position: absolute; left: 0; top:0; right:0; bottom:0;
+                background-color: rgba(0,0,0,0.2); opacity: 0; transition: opacity .5s ease;}
+.imgbox:hover::after { opacity: 1;}
+.imgbox .sale { width: 70px; height: 40px; background-color: deeppink;
+                position: absolute; right:-70px; top:0; text-align: center; line-height: 40px;
+                font-size: 24px; color:#fff; z-index:1; transition: right .5s ease;}
+.imgbox:hover .sale { right: 0; }
+.imgbox .icons { position:absolute; bottom:50px; left: 50%; transform: translateX(-50%);
+  width:218px; z-index:1; transition: bottom 1s ease;}
+.imgbox .icons a { width: 50px; height:40px; background-color: rgba(150,150,150,0.5);
+ display:inline-block; color:deeppink; font-size: 20px;
+text-align:center; line-height: 40px; }
+.imgbox:hover .icons { bottom: 20px;}
+.imgbox .icons a:hover { color: deeppink;}
+
+
+
+
+.textbox {margin-top:20px;}
+.textbox .title { text-decoration: underline; border-bottom: 1px solid #555;}
+.textbox .title a { text-decoration: none; color:#555; border-bottom:1px solid #ccc;}
+.textbox .price {color:#e21e62; font-size: 15px; font-weight: bold; margin: 15px 0 5px;}
+.textbox .detail { font-size: 11px; color:#999;}

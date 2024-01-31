@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Document</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    .clear::after { content: ""; display: block; clear: both; }
+    #wrap { width: 700px; margin: 0 auto; border: 1px solid #ccc;}
+    header { background-color: cadetblue; padding: 10px 0;
+             text-align: center; }
+    header h1 { margin-bottom: 10px; }         
+    /* 120 x 4 + 30px */
+    .menu { list-style: none; margin: 0 auto; width: 510px; }  
+    .menu li { float: left; width: 120px; height: 30px;
+               background-color: blue; line-height: 30px; 
+               margin-right: 10px; }
+    .menu li:hover { background-color: darkcyan; }
+    .menu li:last-child { margin-right: 0; }           
+    .menu li a { text-decoration: none; color: #fff; }       
+    #content {  background-color: yellow; }
+    #content .left { float: left; width: 200px;
+                     background-color: greenyellow; 
+                     padding: 20px; }
+    #content .right { float: right; width: 400px;
+                      background-color: orange; 
+                      padding: 20px; }
+    footer { background-color: cadetblue; height: 100px; 
+             position: relative; }
+    footer p { position: absolute; left: 50%; top: 50%; 
+               margin-left: -50px; margin-top: -15px;
+               width: 100px; height: 30px; border: 1px solid red;
+               text-align: center; }  
+
+  .banner { width: 100px; height: 200px; background-color: chocolate;
+            position: fixed; left: 50%; top: 100px;
+            margin-left: 360px; }
+  </style>
+</head>
+<body>
+  <div class="banner">banner</div>
+  <div id="wrap">
+    <header>
+      <h1>LOGO</h1>
+      <ul class="menu clear">
+        <li><a href="#">menu01</a></li>
+        <li><a href="#">menu02</a></li>
+        <li><a href="#">menu03</a></li>
+        <li><a href="#">menu04</a></li>
+        <!-- clear -->
+      </ul>
+    </header>
+    <div id="content" class="clear">
+      <nav class="left">
+        <h2>서브 베너단</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero voluptates consequatur doloremque animi, obcaecati natus soluta fugiat repellendus ab explicabo magnam neque nesciunt velit vitae perferendis quas, iusto error minus!</p>
+      </nav>
+      <section class="right">
+        <h2>본문 컨텐츠</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et fuga sint explicabo impedit accusantium exercitationem in ut mollitia quasi? Debitis, excepturi nemo? Deserunt, enim delectus? Hic minima in reprehenderit non?</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et fuga sint explicabo impedit accusantium exercitationem in ut mollitia quasi? Debitis, excepturi nemo? Deserunt, enim delectus? Hic minima in reprehenderit non?</p>
+      </section>
+    </div>
+    <footer>
+      <p>Copyright</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    ul li { list-style: none; }
+    div, ul, li { box-sizing: border-box; }
+
+    /* PC 1200px 중앙정렬 + 공통 */
+    body { font-family: Arial, Helvetica, sans-serif; }
+    #wrap { max-width: 1200px; margin: 0 auto; }
+    h1, h3 { font-size: 32px; text-align: center; text-transform: uppercase; 
+             line-height: 1.4; }
+    h3 { font-weight: 100; margin-top: 50px; }
+    h1 { font-weight: 700; }
+    .list { margin-top: 20px; max-height: 500px; height: auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 10px;
+          }
+    .list li { }
+    .list li:nth-child(1) { 
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+    }
+    .list li:nth-child(2) { }
+    .list li:nth-child(3) { }
+    .list li:nth-child(4) { }
+    .list li:nth-child(5) { }
+    .list li:nth-child(6) { 
+      grid-column: 4 / 5;
+      grid-row: 1 / 3;
+    }
+    .list li img { width: 100%; display: block; }
+    
+    /* 모바일 화면 적용 max-width: 580px --> 0 ~ 580px */
+    @media screen and (max-width: 620px) {
+      /* body { background-color: red; } */
+      .list { grid-template-columns: repeat(2, 1fr);
+              grid-template-rows: repeat(4, 1fr);  }
+      
+      .list li:nth-child(1) { 
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+      }
+      .list li:nth-child(2) { grid-column: 2 / 3; grid-row: 1 / 2; }
+      .list li:nth-child(3) { grid-column: 2 / 3; grid-row: 2 / 3; }
+      .list li:nth-child(4) { grid-column: 1 / 2; grid-row: 3 / 4; }
+      .list li:nth-child(5) { grid-column: 1 / 2; grid-row: 4 / 5; }
+      .list li:nth-child(6) { grid-column: 2 / 3; grid-row: 3 / 5; }
+      
+    }
+  </style>
+</head>
+<body>
+   <div id="wrap">
+    <h3>Hello?</h3>
+    <h1>My name is jenny!</h1>
+    <ul class="list">
+      <li><img src="images/main.jpg" alt="1"></li>
+      <li><img src="images/main2.jpg" alt="2"></li>
+      <li><img src="images/main3.jpg" alt="3"></li>
+      <li><img src="images/main4.jpg" alt="4"></li>
+      <li><img src="images/main5.jpg" alt="5"></li>
+      <li><img src="images/main6.jpg" alt="6"></li>
+    </ul>
+   </div>
+</body>
+</html>
